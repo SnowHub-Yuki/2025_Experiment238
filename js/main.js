@@ -8,7 +8,7 @@ const jsPsych = initJsPsych({
 const timeline = [
   {
     type: jsPsychHtmlButtonResponse,
-    stimulus: '実験を開始します',
+    stimulus: '実験を開始します<br>（OKボタンを押して画面の指示どおりに進んでください）',
     choices: ['OK']
   },
   {
@@ -100,4 +100,5 @@ timeline.push(outro);
 
 // 実行
 jsPsych.run(timeline);
+
 
