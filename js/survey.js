@@ -326,11 +326,11 @@ function agentDecisions() {
         decision = 1; // 意思決定
         result = 1; // 獲得成功
         random = 0;
+        console.log("獲得カード:", `${cards[last_choice].label} ${cards[last_choice].value}円`);
         return `<p>おめでとうございます！${cards[last_choice].label}のカード（${cards[last_choice].value}円）を獲得しました！</p>
         <p>あなたの実験報酬は <b style="color: red;">${cards[last_choice].value} 円</b>です。</p>
         <p>この後、アンケートに進みます。</p>
         `;
-        console.log("獲得カード:",${cards[last_choice].label}${cards[last_choice].value}"円");
       }
     },
     on_finish: function(data){
@@ -419,6 +419,7 @@ function agentDecisions() {
         value: selectedCard.value,
         phase: "auto_select"
       });
+      console.log("自動選択カード:", `${selectedCard.label} ${selectedCard.value}円`);
       //分岐メッセージ
       let roundMsg = "";
         if (roundNumber > 11) {
@@ -436,7 +437,6 @@ function agentDecisions() {
           <p>このカードがあなたの獲得カードとなります。</p>
           <p>次へ進んでください。</p>
         `;
-        console.log("自動選択カード:",${selectedCard.label}${selectedCard.value}"円");
         },
         on_finish: function(data){
           var selectedCardIndex = jsPsych.data.get().filter({phase: "auto_select"}).last(1).values()[0].chosen;
@@ -552,6 +552,7 @@ function agentDecisions() {
     ]
   };
 };
+
 
 
 
