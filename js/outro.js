@@ -124,7 +124,7 @@ var outro = {
         `<div style="text-align:center; max-width:750px; margin:auto; line-height:1.0;">
           <h1>事後アンケート</h1>
           <p>次のページから始まる質問にお答えください。</p>
-          <p>最後までご回答いただくと、<b>アンケート報酬として100円</b>が支払われます。</p>
+          <p>最後までご回答いただくと、<b>アンケート報酬として追加の100円</b>が支払われます。</p>
           <p>回答は約5分程度で終わります。</p>
           <p>質問の回答内容は、実験の報酬には影響しませんので、</p>
           <p>安心して正直な回答をお願いいたします。</p>
@@ -198,7 +198,7 @@ var outro = {
       type: jsPsychSurveyHtmlForm,
       html: `
         <div style="margin-bottom: 24px;">
-          <p><b>4. その他、カードを決定する際に、考えたこと・悩んだことはありましたか？</b></p>
+          <p><b>4. その他、カードを決定する際に、考えたこと・悩んだことはありましたか？あれば内容を教えてください。</b></p>
           <textarea name="q4" rows="3" cols="60"></textarea>
         </div>
       `,
@@ -220,8 +220,8 @@ var outro = {
       html: `
         <div style="margin-bottom: 24px;">
           <p><b>6. 獲得したいと思っていたカードを他の参加者にとられることがありましたか？</b></p>
-          <label><input type="radio" name="q6" value="0" > はい</label><br>
-          <label><input type="radio" name="q6" value="1"> いいえ</label>
+          <label><input type="radio" name="q6" value="0" > あった</label><br>
+          <label><input type="radio" name="q6" value="1"> なかった</label>
         </div>
       `,
       button_label: "次へ"
@@ -286,6 +286,7 @@ var outro = {
     }
   ],
 };  // outro.jsのtimelineに追加
+
 
 
 
